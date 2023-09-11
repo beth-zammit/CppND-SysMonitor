@@ -119,8 +119,8 @@ long LinuxParser::ActiveJiffies(int pid) {
     while(linestream >> value){
       if((count >=13) && (count  <17)){
    		active += std::stol(value) ;
-         count++;
-    	}
+     	}
+      count++;
     }
   }
   return active / sysconf(_SC_CLK_TCK);
